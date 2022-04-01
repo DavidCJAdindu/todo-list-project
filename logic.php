@@ -15,8 +15,15 @@ $query_builder = TRUE;
 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
 
-// Destroy if not possible to create a connection
-if(!$conn){
-  echo "<h2>Not able to establish Database Connection<h2>";
-}
+$sName = $cleardb_server;
+$uName = $cleardb_username;
+$pass = $cleardb_password;
+$db_name = "todos";
 
+try {
+    $conn = new PDO("mysql:host=$sName;dbname=$db_name", 
+                    $uName, $pass);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}catch(PDOException $e){
+  echo "Connection failed : ". $e->getMessage();
+} 

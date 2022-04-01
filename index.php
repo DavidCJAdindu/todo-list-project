@@ -1,8 +1,6 @@
 <?php 
 require 'logic.php';
 
-// importing the necessary Cloudinary files
-require 'Cloudinary.php';
 
 ?>
 <!DOCTYPE html>
@@ -37,35 +35,28 @@ require 'Cloudinary.php';
           $todos = $conn->query("SELECT * FROM todos ORDER BY id ASC");
        ?>
        <div class="show-todo-section">
-            <?php if($todos->rowCount() <= 0){ ?>
-                <div class="todo-item">
-                    <div class="empty">
-                        <img src="https://res.cloudinary.com/hb02oaz5k/image/upload/v1648781185/f_ws2y38.png" width="100%" />
-                        <img src="https://res.cloudinary.com/hb02oaz5k/image/upload/v1648781170/Ellipsis_bogozk.gif" width="80px">
-                    </div>
-                </div>
-            <?php } ?>
 
             <?php while($todo = $todos->fetch(PDO::FETCH_ASSOC)) { ?>
                 <div class="todo-item">
                     <span id="<?php echo $todo['id']; ?>"
-                          class="remove-to-do">x</span>
+                            class="remove-to-do">x</span>
                     <?php if($todo['checked']){ ?> 
                         <input type="checkbox"
-                               class="check-box"
-                               data-todo-id ="<?php echo $todo['id']; ?>"
-                               checked />
+                                class="check-box"
+                                data-todo-id ="<?php echo $todo['id']; ?>"
+                                checked />
                         <h2 class="checked"><?php echo $todo['title'] ?></h2>
                     <?php }else { ?>
                         <input type="checkbox"
-                               data-todo-id ="<?php echo $todo['id']; ?>"
-                               class="check-box" />
+                                data-todo-id ="<?php echo $todo['id']; ?>"
+                                class="check-box" />
                         <h2><?php echo $todo['title'] ?></h2>
                     <?php } ?>
                     <br>
                     <small>created: <?php echo $todo['date_time'] ?></small> 
                 </div>
             <?php } ?>
+
        </div>
     </div>
 
