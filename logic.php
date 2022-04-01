@@ -15,6 +15,8 @@ $query_builder = TRUE;
 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
 
+/*
+
 $sName = $cleardb_server;
 $uName = $cleardb_username;
 $pass = $cleardb_password;
@@ -27,3 +29,5 @@ try {
 }catch(PDOException $e){
   echo "Connection failed : ". $e->getMessage();
 } 
+
+*/
