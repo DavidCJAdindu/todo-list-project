@@ -15,7 +15,7 @@ $query_builder = TRUE;
 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
 
-/*
+
 
 $sName = $cleardb_server;
 $uName = $cleardb_username;
@@ -30,4 +30,3 @@ try {
   echo "Connection failed : ". $e->getMessage();
 } 
 
-*/
