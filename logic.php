@@ -18,7 +18,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
 $sName = $cleardb_server;
 $uName = $cleardb_username;
 $pass = $cleardb_password;
-$db_name = "heroku_299252175a247a1";
+$db_name = "todos";
 
 try {
     $conn = new PDO("mysql:host=$sName;dbname=$db_name", 
