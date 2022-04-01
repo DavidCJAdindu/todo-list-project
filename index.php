@@ -65,6 +65,10 @@ require 'logic.php';
        </div>
     </div>
 
+    <footer style="margin: 20px auto; bottom: 0; position:absolute; width: 100%">
+         <p style="text-align: center; font-size: 14px; word-spacing: 2px; text-transform: capitalize; color: #000;"> copyright &copy;2022 Developed by <span style="text-transform: uppercase; opacity: 4; font-weight: 200;">David Adindu</span></p>
+    </footer>
+
     <script src="js/jquery-3.2.1.min.js"></script>
 
     <script>
@@ -106,9 +110,7 @@ require 'logic.php';
         });
     </script>
 
-    <footer style="margin: 20px auto; bottom: 0; position:absolute; width: 100%">
-         <p style="text-align: center; font-size: 14px; word-spacing: 2px; text-transform: capitalize; color: #000;"> copyright &copy;2022 Developed by <span style="text-transform: uppercase; opacity: 4; font-weight: 200;">David Adindu</span></p>
-    </footer>
+
 
     
 </body>
