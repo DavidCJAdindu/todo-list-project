@@ -1,5 +1,9 @@
 <?php 
 require 'logic.php';
+
+// importing the necessary Cloudinary files
+require 'Cloudinary.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,8 +40,8 @@ require 'logic.php';
             <?php if($todos->rowCount() <= 0){ ?>
                 <div class="todo-item">
                     <div class="empty">
-                        <img src="img/f.png" width="100%" />
-                        <img src="img/Ellipsis.gif" width="80px">
+                        <img src="https://res.cloudinary.com/hb02oaz5k/image/upload/v1648781185/f_ws2y38.png" width="100%" />
+                        <img src="https://res.cloudinary.com/hb02oaz5k/image/upload/v1648781170/Ellipsis_bogozk.gif" width="80px">
                     </div>
                 </div>
             <?php } ?>
@@ -65,9 +69,6 @@ require 'logic.php';
        </div>
     </div>
 
-    <footer style="margin: 20px auto; bottom: 0; position:absolute; width: 100%">
-         <p style="text-align: center; font-size: 14px; word-spacing: 2px; text-transform: capitalize; color: #000;"> copyright &copy;2022 Developed by <span style="text-transform: uppercase; opacity: 4; font-weight: 200;">David Adindu</span></p>
-    </footer>
 
     <script src="js/jquery-3.2.1.min.js"></script>
 
@@ -110,7 +111,9 @@ require 'logic.php';
         });
     </script>
 
-
+    <footer style="margin: 20px auto; bottom: 0; position:absolute; width: 100%">
+         <p style="text-align: center; font-size: 14px; word-spacing: 2px; text-transform: capitalize; color: #000;"> copyright &copy;2022 Developed by <span style="text-transform: uppercase; opacity: 4; font-weight: 200;">David Adindu</span></p>
+    </footer>
 
     
 </body>
