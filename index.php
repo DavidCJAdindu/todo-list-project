@@ -30,7 +30,7 @@ require 'logic.php';
           </form>
        </div>
        <?php 
-          $todos = $conn->query("SELECT * FROM todos ORDER BY id DESC");
+          $todos = $conn->query("SELECT * FROM todos ORDER BY id ASC");
        ?>
        <div class="show-todo-section">
             <?php if($todos->rowCount() <= 0){ ?>
